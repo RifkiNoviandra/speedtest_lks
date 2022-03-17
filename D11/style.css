@@ -1,0 +1,17 @@
+.page-item{
+    border-radius: 20px;
+}
+
+.custom{
+    margin: 0 10px;
+    border-radius: 50%;
+    background-color: #5454ff;
+    color: white;
+}
+
+.link_active{
+    margin: 0 10px;
+    border-radius: 50%;
+    background-color: darkblue;
+    color: white;
+}

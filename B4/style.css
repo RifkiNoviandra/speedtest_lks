@@ -1,0 +1,97 @@
+
+label{
+    user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+    width: 80px;
+    height: 40px;
+    overflow: hidden;
+    border-radius: 20px;
+    display: block;
+    position: relative;
+}
+
+input{
+
+}
+
+input::before{
+    content: "";
+    position: absolute;
+    background-color: darkblue;
+    left: 0;
+    top: 0;
+    width: 80px;
+    height: 40px;
+    border-radius: 20px;
+    transition: background-color .1s ease-out .4s;
+}
+
+input::after{
+    content: "";
+    position: absolute;
+    background-color: deepskyblue;
+    left: 20px;
+    top: 20px;
+    width: 20px;
+    height: 20px;
+    border-radius: 20px;
+    transform: translate(-50% , -50%);
+    animation: unChange 1s;
+    animation-fill-mode: forwards;
+}
+
+input:checked::before{
+    background-color: deepskyblue;
+}
+
+input:checked::after{
+    animation: change 1s;
+    animation-fill-mode: forwards;
+
+}
+
+@keyframes change {
+    50%{
+        width: 120px;
+        height: 120px;
+        background-color: deepskyblue;
+    }
+    51%{
+        width: 0;
+        height: 0;
+    }
+
+    100%{
+        left: 60px;
+        width: 20px;
+        height: 20px;
+        background-color: darkblue;
+    }
+}
+
+@keyframes unChange {
+    0%{
+        left: 60px;
+        background-color: darkblue;
+    }
+
+    50%{
+        width: 120px;
+        height: 120px;
+        background-color: darkblue;
+    }
+
+    51%{
+        width: 0;
+        height: 0;
+    }
+
+    100%{
+        left: 20px;
+        width: 20px;
+        height: 20px;
+        background-color: deepskyblue;
+    }
+}

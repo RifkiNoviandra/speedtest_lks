@@ -1,0 +1,27 @@
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.triangle{
+    width: 0;
+    height: 0;
+    border-left: 100px solid transparent;
+    border-right: 100px solid transparent;
+    border-bottom: 200px solid blue;
+    animation: change 2s infinite;
+}
+
+@keyframes change {
+    50%{
+        width: 200px;
+        height: 200px;
+        border-left: 0;
+        border-right: 0;
+        border-bottom: 0;
+        background-color: yellow;
+    }
+}
